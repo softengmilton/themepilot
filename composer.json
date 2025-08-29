@@ -1,0 +1,20 @@
+{
+    "name": "deymi/themepilot",
+    "description": "themepilot serve for manage screen mode",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Milton Dey Mishu",
+            "email": "114005218+softengmilton@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+
+}
