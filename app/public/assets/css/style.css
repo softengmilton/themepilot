@@ -1,0 +1,16 @@
+#toplevel_page_themepilot .wp-menu-name {
+    background: #0073aa;
+    /* Blue like WP Dark Mode */
+    color: #fff !important;
+    font-weight: bold;
+}
+#toplevel_page_themepilot .wp-submenu li a {
+    color: #ddd !important;
+}
+#toplevel_page_themepilot .wp-submenu li a:hover {
+    color: #fff !important;
+}
+#toplevel_page_themepilot div.wp-menu-image img {
+    width: 20px !important;
+    height: 20px !important;
+}

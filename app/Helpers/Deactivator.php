@@ -2,9 +2,9 @@
 
 namespace App\Helpers;
 
-class Activator
+class Deactivator
 {
-    public static function activate()
+    public static function deactivate()
     {
         flush_rewrite_rules();
     }
