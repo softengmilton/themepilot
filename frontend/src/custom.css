@@ -6,3 +6,225 @@
     width: 25px !important;
     height: 30px !important;
 }
+/* Sidebar styles */
+.wp-dark-mode-admin-sidebar {
+    width: 280px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.wp-dark-mode-admin-sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.wp-dark-mode-admin-sidebar-header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wp-dark-mode-admin-sidebar-header-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.wp-dark-mode-admin-sidebar-header-button {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: #6b7280;
+}
+
+.wp-dark-mode-admin-sidebar-header-button:hover {
+    background-color: #f3f4f6;
+}
+
+.wp-dark-mode-admin-sidebar-nav {
+    padding: 1rem 0;
+}
+
+.wp-dark-mode-admin-sidebar-nav-container {
+    margin-bottom: 0.5rem;
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 280px;
+    flex: 1;
+    padding: 2rem;
+}
+
+.main-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.main-content-header-items {
+    display: flex;
+    gap: 1rem;
+}
+
+.main-content-header-items .item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    background-color: #f9fafb;
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.main-content-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Toggle switch */
+.wp-dark-mode-ignore {
+    user-select: none;
+}
+
+/* Badge styles */
+.HW_badge_cont {
+    position: relative;
+    display: inline-block;
+}
+
+.HW_badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ef4444;
+    color: white;
+    border-radius: 9999px;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Upgrade box */
+.wp-dark-mode-upgrade-box-1 {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.wp-dark-mode-upgrade-box-1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #fff, #6b21a8);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .wp-dark-mode-admin-sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .main-content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .main-content-header-items {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* Dark mode support */
+.dark\:bg-\[\#2c3338\] {
+    background-color: #2c3338;
+}
+
+.dark\:text-white {
+    color: #fff;
+}
+
+
+/* Custom classes for WP Dark Mode */
+.wp-dark-mode-white {
+    color: #fff;
+}
+
+.wp-dark-mode-locked {
+    background-color: #f59e0b;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.wp-dark-mode-ignore {
+    user-select: none;
+}
+
+.nav-item-child {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    color: #4b5563;
+    transition: all 0.2s;
+}
+
+.nav-item-child.active {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    font-weight: 500;
+}
+
+.nav-item-child.inactive:hover {
+    background-color: #f3f4f6;
+}
+
+/* Animation classes */
+.HW_visible {
+    visibility: visible;
+}
+
+.HW_animated {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
