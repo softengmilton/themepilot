@@ -17,7 +17,7 @@ class AdminMenuHandler
             'ThemePilot',
             'manage_options',
             'themepilot',
-            [$this, 'renderAdminPage'],
+            [$this, 'renderVueApp'],
             THEMEPILOT_URL . 'app/public/assets/img/default/menu-icon.png', // choose your icon
             59
         );
@@ -29,7 +29,7 @@ class AdminMenuHandler
             'Settings',
             'manage_options',
             'themepilot-settings',
-            [$this, 'renderSettingsPage']
+            [$this, 'renderVueApp']
         );
 
         add_submenu_page(
@@ -38,7 +38,7 @@ class AdminMenuHandler
             'Social Share',
             'manage_options',
             'themepilot-social',
-            [$this, 'renderSocialPage']
+            [$this, 'renderVueApp']
         );
 
         add_submenu_page(
@@ -47,7 +47,7 @@ class AdminMenuHandler
             '<strong style="color:#fff;">Get Started</strong>', // Bold like screenshot
             'manage_options',
             'themepilot-get-started',
-            [$this, 'renderGetStartedPage']
+            [$this, 'renderVueApp']
         );
 
         add_submenu_page(
@@ -56,7 +56,7 @@ class AdminMenuHandler
             'Recommended Plugins',
             'manage_options',
             'themepilot-plugins',
-            [$this, 'renderPluginsPage']
+            [$this, 'renderVueApp']
         );
 
         add_submenu_page(
@@ -65,11 +65,19 @@ class AdminMenuHandler
             '<span style="color:#00e676; font-weight:bold;">UPGRADE NOW &#128142;</span>', // Green like screenshot
             'manage_options',
             'themepilot-upgrade',
-            [$this, 'renderUpgradePage']
+            [$this, 'renderVueApp']
         );
 
         remove_submenu_page('themepilot', 'themepilot');
     }
+    function renderVueApp()
+    {
+?>
+        <div id="themepilot-app">
+        </div>
+<?php
+    }
+
 
     // Pages
     public function renderAdminPage()

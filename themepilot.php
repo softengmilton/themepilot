@@ -22,6 +22,7 @@ define('THEMEPILOT_PATH', plugin_dir_path(__FILE__));
 define('THEMEPILOT_URL', plugin_dir_url(__FILE__));
 define('THEMEPILOT_BASENAME', plugin_basename(__FILE__));
 define('THEMEPILOT_VERSION', '1.10.3');
+define('THEMEPILOT_DEV', true); // Set to false for production
 
 class ThemePilot
 {
