@@ -1,33 +1,36 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router' // Changed to createWebHashHistory
 
 // Import your page components
-import Dashboard from '../pages/Dashboard.vue'
 import Settings from '../pages/Settings.vue'
-import SocialShare from '../pages/SocialShare.vue'
+import ThemeMixer from '../pages/ThemeMixer.vue'
 import GetStarted from '../pages/GetStarted.vue'
-import RecommendedPlugins from '../pages/RecommendedPlugins.vue'
+import Recommended from '../pages/Recommended.vue'
 import Upgrade from '../pages/Upgrade.vue'
 
 const routes = [
-  { path: '/', redirect: '/dashboard' },
-  { path: '/dashboard', component: Dashboard },
+  { path: '/', redirect: '/settings' },
   { path: '/settings', component: Settings },
-  { path: '/social-share', component: SocialShare },
-  { path: '/get-started', component: GetStarted },
-  { path: '/recommended-plugins', component: RecommendedPlugins },
+  { path: '/theme-mixer', component: ThemeMixer },
+  { path: '/get-started', component: GetStarted }, 
+  { path: '/plugins', component: Recommended },
   { path: '/upgrade', component: Upgrade }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(), 
   routes
 })
 
 // Sync with WordPress page parameter
 router.beforeEach((to, from, next) => {
-  const wpPage = window.themepilotWP?.current_page
-  if (wpPage && to.path !== `/${wpPage.replace('themepilot-', '')}`) {
-    next(`/${wpPage.replace('themepilot-', '')}`)
+  const urlParams = new URLSearchParams(window.location.search)
+  const wpPage = urlParams.get('page') || 'themepilot-settings'
+
+  // Remove 'themepilot-' prefix and navigate to that route
+  const routePath = wpPage.replace('themepilot-', '')
+  
+  if (to.path !== `/${routePath}`) {
+    next(`/${routePath}`)
   } else {
     next()
   }

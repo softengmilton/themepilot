@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import './style.css'
+import './custom.css'
 import App from './App.vue'
+import router from './router'
 
-createApp(App).mount('#themepilot-app')
+createApp(App).use(router).mount('#themepilot-app')

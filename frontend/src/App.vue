@@ -1,10 +1,8 @@
-<template>
-  <Dashboard />
-</template>
+<script setup >
+import AppLayout from './@layoput/AppLayout.vue';
 
-<script>
-import Dashboard from './pages/Dashboard.vue'
-export default {
-  components: { Dashboard }
-}
 </script>
+
+<template>
+  <AppLayout />
+</template>

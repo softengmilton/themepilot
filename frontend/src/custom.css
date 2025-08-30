@@ -1,0 +1,8 @@
+#wpcontent,
+#wpfooter {
+    margin-left: 140px !important;
+}
+#toplevel_page_themepilot div.wp-menu-image img {
+    width: 25px !important;
+    height: 30px !important;
+}

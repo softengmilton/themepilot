@@ -34,10 +34,10 @@ class AdminMenuHandler
 
         add_submenu_page(
             'themepilot',
-            'Social Share',
-            'Social Share',
+            'Theme Mixer',
+            'Theme Mixer',
             'manage_options',
-            'themepilot-social',
+            'themepilot-theme-mixer',
             [$this, 'renderVueApp']
         );
 

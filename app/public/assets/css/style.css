@@ -11,6 +11,10 @@
     color: #fff !important;
 }
 #toplevel_page_themepilot div.wp-menu-image img {
-    width: 20px !important;
-    height: 20px !important;
+    width: 25px !important;
+    height: 30px !important;
+}
+#wpcontent,
+#wpfooter {
+    margin-left: 140px !important;
 }
