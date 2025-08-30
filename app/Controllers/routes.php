@@ -3,17 +3,17 @@ defined('ABSPATH') || exit;
 
 use App\Services\Router;
 use App\Controllers\SettingController;
-
+use App\Controllers\ThemeController;
 
 // Initialize the router
 $router = new Router('my-plugin/v1');
 
-// Define routes for each controller
-$router->get('/settings', [SettingController::class, 'getSettings']);
-$router->post('/settings', [SettingController::class, 'saveSettings']);
-
-
-
+// Theme routes
+$router->get('/themes', [ThemeController::class, 'getAllThemes']);
+$router->get('/themes/(?P<id>\d+)', [ThemeController::class, 'getTheme']);
+$router->post('/themes', [ThemeController::class, 'createTheme']);
+$router->put('/themes/(?P<id>\d+)', [ThemeController::class, 'updateTheme']);
+$router->delete('/themes/(?P<id>\d+)', [ThemeController::class, 'deleteTheme']);
 
 
 // You can also add custom permission callbacks
